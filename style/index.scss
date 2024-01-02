@@ -1,5 +1,13 @@
 @use "utils";
 
+* {
+  padding: 0;
+  margin: 0;
+  transition: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
 body {
   font-family: utils.$font-body;
   padding: 0;
@@ -16,9 +24,9 @@ body {
       height: 100dvh;
     }
     .nav-container {
-      background-color: black;
-      position: sticky;
-      top: 0;
+      // background-color: black;
+      // position: sticky;
+      // top: 0;
       color: white;
       font-weight: 500;
       padding-block: 10px;
@@ -29,30 +37,48 @@ body {
         width: 90dvw;
         margin: auto;
         justify-content: space-between;
+        padding-top: 20px;
         #logo {
           font-family: utils.$font-body;
           display: flex;
           align-items: center;
           gap: 4px;
           letter-spacing: 2px;
-          background: -webkit-linear-gradient(
-            rgb(7, 137, 251),
-            rgb(255, 72, 0)
-          );
+          // background: -webkit-linear-gradient(
+          //   rgb(7, 137, 251),
+          //   rgb(255, 72, 0)
+          // );
+          background-color: white;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .menu-items {
           ul {
             list-style-type: none;
+            text-transform: uppercase;
             display: flex;
             align-items: center;
             gap: 60px;
-            font-family: utils.$font-header;
+            font-family: utils.$font-body;
             font-size: 15px;
             color: rgb(255, 255, 255);
+            // text-transform: uppercase;
+            a {
+              text-decoration: none;
+              color: white;
+              li {
+                padding: 5px;
+                border-bottom: 1px solid transparent;
+                &:hover {
+                  border-bottom: 1px solid white;
+                }
+              }
+            }
             .active {
               color: utils.$primary-color;
+              &:hover {
+                border-bottom: 1px solid transparent;
+              }
             }
           }
         }
@@ -78,7 +104,7 @@ body {
         .hero-subtitle {
           font-family: utils.$font-body;
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 400;
           line-height: 1.6rem;
           margin: 0;
           margin-bottom: 34px;
@@ -93,27 +119,34 @@ body {
           align-items: center;
           background-color: transparent;
           color: utils.$primary-color;
+          // color: white;
           border: 1px solid utils.$primary-color;
           font-family: utils.$font-body;
           font-size: 18px;
-          padding: 10px 20px;
+          padding: 15px 25px;
           gap: 7px;
           margin-top: 10px;
           transition: all;
           transition-duration: 150ms;
+          transition-timing-function: ease-in-out;
           &:hover {
             background-color: utils.$primary-color;
             color: white;
             cursor: pointer;
+            // font-size: 19px;
+            // font-weight: 500;
           }
         }
       }
     }
   }
   .info-component {
-    background-color: rgba(228, 228, 228, 0.5);
+    // background-color: utils.$background-light;
+    background-image: url("../assets/infobg1.svg");
+    background-position: center;
+    background-size: cover;
     backdrop-filter: blur(5px);
-    padding: 20px 40px;
+    padding: 70px 50px;
     border-radius: 5px;
     color: black;
 
@@ -129,21 +162,26 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 30px;
+
         .info-title {
           text-align: center;
           font-family: utils.$font-header;
+          font-weight: 700;
           font-size: 24px;
           padding-bottom: 5px;
         }
         .line-style {
           width: 150px;
-          height: 5px;
+          height: 2px;
           background-color: utils.$primary-color;
+          border-radius: 7px 0 7px 0;
         }
         .info-detail {
+          padding-top: 20px;
           text-align: center;
           line-height: 1.6rem;
-          color: rgb(108, 108, 108);
+          color: utils.$text-light;
           font-weight: 500;
           font-size: 16px;
           font-family: utils.$font-body;
@@ -157,17 +195,175 @@ body {
         justify-content: space-between;
         align-items: start;
         padding: 20px;
-        min-height: 30vh;
+        gap: 20px;
+
         .items {
           width: 30%;
           background-color: white;
-          min-height: 100%;
+          min-height: 210px;
           padding: 20px;
           margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          // border-radius: 10px;
+          gap: 10px;
+          transition: all;
+          transition-duration: 150ms;
+          transition-timing-function: linear;
+          border: 1px solid transparent;
+          &:hover {
+            box-shadow: 2px 2px 2px utils.$blue;
+            border: 1px solid utils.$blue;
+          }
         }
+
         .info-items-title {
           font-family: utils.$font-header;
           font-size: 20px;
+        }
+        .info-detail {
+          text-align: center;
+          line-height: 1.6rem;
+          color: rgb(108, 108, 108);
+          font-size: 16px;
+          font-family: utils.$font-body;
+        }
+      }
+    }
+  }
+  .mission-component {
+    background-image: url("../assets/missionbg.svg");
+    background-position: center;
+    background-size: cover;
+    padding-block: 80px;
+    .mission-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-inline: auto;
+      align-items: center;
+      .mission-illustration {
+        background-image: url(../assets/ill1.jpg);
+        width: 40%;
+        height: 300px;
+        // border-radius: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 70% 60%;
+        border-top-right-radius: 30% 40%;
+        border-bottom-right-radius: 30% 60%;
+        border-bottom-left-radius: 70% 40%;
+        &:hover {
+          border-radius: 10px;
+        }
+      }
+      .mission {
+        width: 50%;
+
+        h3 {
+          font-family: utils.$font-header;
+          font-size: 24px;
+          font-weight: 700;
+          color: utils.$blue;
+          padding-bottom: 20px;
+          display: flex;
+          gap: 5px;
+          p {
+            color: utils.$primary-color;
+          }
+        }
+        .mission-detail {
+          line-height: 1.6rem;
+          font-size: 16px;
+          font-family: utils.$font-body;
+        }
+        button {
+          background-color: transparent;
+          outline: none;
+          border: 2px solid utils.$blue;
+          padding: 15px 25px;
+          margin-top: 20px;
+          font-weight: 500;
+          font-size: 16px;
+          font-family: utils.$font-body;
+          &:hover {
+            background-color: utils.$blue;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .line-divider {
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: utils.$background-light;
+  }
+
+  .vision-component {
+    padding-block: 80px;
+    background-image: url("../assets/bgvision.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .mission-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin-inline: auto;
+      align-items: center;
+      .mission {
+        width: 60%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(40px);
+        padding: 20px;
+        h3 {
+          font-family: utils.$font-header;
+          font-size: 24px;
+          font-weight: 700;
+          color: white;
+          padding-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+          p {
+            color: utils.$primary-color;
+          }
+        }
+        .mission-detail {
+          line-height: 1.6rem;
+          font-size: 16px;
+          font-family: utils.$font-body;
+          color: white;
+        }
+        button {
+          background-color: transparent;
+          outline: none;
+          border: 2px solid utils.$primary-color;
+          padding: 15px 25px;
+          margin-top: 20px;
+          font-weight: 500;
+          font-size: 16px;
+          font-family: utils.$font-body;
+          color: white;
+          background-color: utils.$primary-color;
+          &:hover {
+            border: 2px solid utils.$primary-color;
+            background-color: transparent;
+            color: utils.$primary-color;
+            cursor: pointer;
+            font-size: 16px;
+          }
         }
       }
     }

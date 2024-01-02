@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  transition: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+body {
+  font-family: "Supreme", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body header {
+  background-image: url("../assets/contactbg1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-position-y: 20%;
+  height: 30dvh;
+}
+body header .header {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+body header .nav-container {
+  color: white;
+  font-weight: 500;
+  padding-block: 10px;
+}
+body header .nav-container .navbar {
+  display: flex;
+  align-items: center;
+  width: 90dvw;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+body header .nav-container .navbar #logo {
+  font-family: "Supreme", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 2px;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body header .nav-container .navbar .menu-items ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-family: "Supreme", sans-serif;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+body header .nav-container .navbar .menu-items ul a {
+  text-decoration: none;
+  color: white;
+}
+body header .nav-container .navbar .menu-items ul a li {
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+}
+body header .nav-container .navbar .menu-items ul a li:hover {
+  border-bottom: 1px solid white;
+}
+body header .nav-container .navbar .menu-items ul .active {
+  color: #ec9901;
+}
+body header .nav-container .navbar .menu-items ul .active:hover {
+  border-bottom: 1px solid transparent;
+}
+body header .hero {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  margin: auto;
+  font-family: "Recia", serif;
+  font-size: 26px;
+  color: white;
+}
+body header .hero .hero-content {
+  width: 65%;
+  gap: 50px;
+}
+body header .hero .hero-content .hero-title {
+  display: flex;
+  justify-content: center;
+  margin-block: 34px;
+}
+body .contact-component {
+  background-position: center;
+  background-size: cover;
+  padding-block: 80px;
+  min-height: 45dvh;
+}
+body .contact-component .contact-container {
+  width: 70%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+body .contact-component .contact-container .contact-form {
+  width: 55%;
+}
+body .contact-component .contact-container .contact-form h3 {
+  font-family: "Recia", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #084252;
+  padding-bottom: 20px;
+}
+body .contact-component .contact-container .contact-form .input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .contact-component .contact-container .contact-form .input-fields input {
+  outline-color: #ec9901;
+  padding: 10px;
+  font-family: "Supreme", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+body .contact-component .contact-container .contact-form .input-fields textarea {
+  outline-color: #ec9901;
+  padding: 10px;
+  font-family: "Supreme", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  resize: none;
+}
+body .contact-component .contact-container button {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #ec9901;
+  padding: 15px 25px;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Supreme", sans-serif;
+  color: white;
+  background-color: #ec9901;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+body .contact-component .contact-container button:hover {
+  border: 2px solid #ec9901;
+  background-color: transparent;
+  color: #ec9901;
+  cursor: pointer;
+  font-size: 16px;
+}
+body .contact-component .contact-container .contact-details {
+  width: 40%;
+}
+body .contact-component .contact-container .contact-details h3 {
+  font-family: "Recia", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #084252;
+  padding-bottom: 20px;
+}
+body .contact-component .contact-container .contact-details .contact-message {
+  font-family: "Supreme", sans-serif;
+  font-size: 16px;
+  line-height: 1.6rem;
+  padding-bottom: 15px;
+}
+body .contact-component .contact-container .contact-details .contact-info {
+  font-family: "Supreme", sans-serif;
+  font-size: 16px;
+  line-height: 1.6rem;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgb(108, 108, 108);
+}/*# sourceMappingURL=contact.css.map */

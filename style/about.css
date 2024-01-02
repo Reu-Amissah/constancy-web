@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+  transition: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+body {
+  font-family: "Supreme", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body header {
+  background-image: url("../assets/aboutbg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-position-y: 70%;
+  height: 30dvh;
+}
+body header .header {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+body header .nav-container {
+  color: white;
+  font-weight: 500;
+  padding-block: 10px;
+}
+body header .nav-container .navbar {
+  display: flex;
+  align-items: center;
+  width: 90dvw;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+body header .nav-container .navbar #logo {
+  font-family: "Supreme", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 2px;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body header .nav-container .navbar .menu-items ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-family: "Supreme", sans-serif;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+body header .nav-container .navbar .menu-items ul a {
+  text-decoration: none;
+  color: white;
+}
+body header .nav-container .navbar .menu-items ul a li {
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+}
+body header .nav-container .navbar .menu-items ul a li:hover {
+  border-bottom: 1px solid white;
+}
+body header .nav-container .navbar .menu-items ul .active {
+  color: #ec9901;
+}
+body header .nav-container .navbar .menu-items ul .active:hover {
+  border-bottom: 1px solid transparent;
+}
+body header .hero {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  margin: auto;
+  font-family: "Recia", serif;
+  font-size: 26px;
+  color: white;
+}
+body header .hero .hero-content {
+  width: 65%;
+  gap: 50px;
+}
+body header .hero .hero-content .hero-title {
+  display: flex;
+  justify-content: center;
+  margin-block: 34px;
+}
+body .who-component {
+  padding-block: 80px;
+}
+body .who-component .who-container {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+body .who-component .who-container .who-image {
+  background-image: url("../assets/whobg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-position-x: 25%;
+  width: 40%;
+}
+body .who-component .who-container .who-image:hover {
+  cursor: help;
+}
+body .who-component .who-container .who-content {
+  width: 60%;
+}
+body .who-component .who-container .who-content .who-are-we h3 {
+  font-family: "Recia", serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  display: flex;
+  color: #084252;
+  gap: 5px;
+}
+body .who-component .who-container .who-content .who-are-we h3 p {
+  color: #ec9901;
+}
+body .who-component .who-container .who-content .who-are-we .who-detail {
+  line-height: 1.6rem;
+  font-size: 16px;
+  font-family: "Supreme", sans-serif;
+  text-align: justify;
+}
+body .who-component .who-container .who-content .mission {
+  margin-top: 40px;
+}
+body .who-component .who-container .who-content .mission h3 {
+  font-family: "Recia", serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  display: flex;
+  color: #084252;
+  gap: 5px;
+}
+body .who-component .who-container .who-content .mission h3 p {
+  color: #ec9901;
+}
+body .who-component .who-container .who-content .mission .mission-detail {
+  line-height: 1.6rem;
+  font-size: 16px;
+  font-family: "Supreme", sans-serif;
+  text-align: justify;
+}
+body .who-component .who-container .who-content .mission .mission-detail ul {
+  padding-left: 17px;
+}
+body .who-component .who-container .who-content .mission .mission-detail ul li {
+  padding-bottom: 7px;
+}/*# sourceMappingURL=about.css.map */
