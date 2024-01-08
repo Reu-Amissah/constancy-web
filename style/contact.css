@@ -140,6 +140,7 @@ body .contact-component .contact-container .contact-form .input-fields textarea 
   resize: none;
 }
 body .contact-component .contact-container button {
+  width: 100%;
   background-color: transparent;
   outline: none;
   border: 2px solid #ec9901;
@@ -176,7 +177,7 @@ body .contact-component .contact-container .contact-details .contact-message {
   font-family: "Supreme", sans-serif;
   font-size: 16px;
   line-height: 1.6rem;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 body .contact-component .contact-container .contact-details .contact-info {
   font-family: "Supreme", sans-serif;
@@ -187,4 +188,49 @@ body .contact-component .contact-container .contact-details .contact-info {
   align-items: center;
   gap: 5px;
   color: rgb(108, 108, 108);
+}
+body .site-footer {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+}
+body .site-footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  body .site-footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+body .site-footer .container .footer-logo img {
+  max-width: 100px;
+}
+body .site-footer .container .footer-content {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  body .site-footer .container .footer-content {
+    flex-direction: column;
+  }
+  body .site-footer .container .footer-content .footer-nav {
+    margin-top: 10px;
+  }
+}
+body .site-footer .container .footer-content nav.footer-nav a {
+  color: white;
+  margin: 0 10px;
+}
+body .site-footer .container .footer-content nav.footer-nav a:hover {
+  color: #aaa;
+}
+body .site-footer .container .footer-content .footer-social a {
+  margin: 0 5px;
+}
+body .site-footer .container .footer-content .footer-social a i {
+  font-size: 16px;
 }/*# sourceMappingURL=contact.css.map */

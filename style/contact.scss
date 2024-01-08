@@ -151,6 +151,7 @@ body {
         }
       }
       button {
+        width: 100%;
         background-color: transparent;
         outline: none;
         border: 2px solid utils.$primary-color;
@@ -186,7 +187,7 @@ body {
           font-family: utils.$font-body;
           font-size: 16px;
           line-height: 1.6rem;
-          padding-bottom: 15px;
+          padding-bottom: 5px;
         }
         .contact-info {
           font-family: utils.$font-body;
@@ -197,6 +198,53 @@ body {
           align-items: center;
           gap: 5px;
           color: utils.$text-light;
+        }
+      }
+    }
+  }
+  .site-footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-logo {
+        img {
+          max-width: 100px; // set this to the size of your actual logo
+        }
+      }
+      .footer-content {
+        display: flex;
+        flex-direction: row;
+        @media (max-width: 768px) {
+          flex-direction: column;
+          .footer-nav {
+            margin-top: 10px;
+          }
+        }
+        nav.footer-nav {
+          a {
+            color: white;
+            margin: 0 10px;
+            &:hover {
+              color: #aaa;
+            }
+          }
+        }
+        .footer-social {
+          a {
+            margin: 0 5px;
+            i {
+              font-size: 16px; // Adjust the size of the icons as needed
+            }
+          }
         }
       }
     }
