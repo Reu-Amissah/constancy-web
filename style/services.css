@@ -47,6 +47,12 @@ body header .nav-container .navbar #logo {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+body header .nav-container .navbar .material-symbols-rounded.menu {
+  display: none;
+}
+body header .nav-container .navbar .drop-items {
+  display: none;
+}
 body header .nav-container .navbar .menu-items ul {
   list-style-type: none;
   text-transform: uppercase;
@@ -154,13 +160,12 @@ body .info-component .info-container .info-items {
 body .info-component .info-container .info-items .items {
   width: 30%;
   background-color: white;
-  min-height: 570px;
+  min-height: 650px;
   padding: 20px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 10px;
   transition: all;
   transition-duration: 150ms;
   transition-timing-function: linear;
@@ -170,7 +175,7 @@ body .info-component .info-container .info-items .items:hover {
   box-shadow: 2px 2px 2px #084252;
   border: 1px solid #084252;
 }
-body .info-component .info-container .info-items p {
+body .info-component .info-container .info-items .items .numbers {
   font-size: 24px;
   padding-bottom: 10px;
   color: rgb(108, 108, 108);
@@ -597,4 +602,70 @@ body .final-service .final-component h3 {
   font-family: "Recia", serif;
   font-size: 24px;
   padding-bottom: 10px;
+}
+
+/*---------------------------------
+    Mobile Nav Items
+---------------------------------*/
+@media (max-width: 600px) {
+  .menu-items {
+    display: none;
+  }
+  #mobile-menu {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  #mobile-menu {
+    display: flex;
+  }
+  .menu-items {
+    display: none;
+  }
+  .drop-items {
+    position: absolute;
+    top: 100%;
+    width: 70%;
+    right: 0;
+  }
+  .drop-items ul {
+    border: 1px solid white;
+    padding-left: 0;
+    margin-bottom: 0;
+    gap: 20px;
+    font-family: "Supreme", sans-serif;
+    font-size: 15px;
+    list-style-type: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
+    padding: 20px;
+    padding-block: 40px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .drop-items ul a {
+    text-decoration: none;
+    width: 40%;
+  }
+  .drop-items ul a li {
+    width: 100%;
+    color: white;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+  }
+  .drop-items ul a li:hover {
+    border-bottom: 1px solid white;
+  }
+  .drop-items ul .active {
+    color: #ec9901;
+  }
+  .drop-items ul .active:hover {
+    border-bottom: 1px solid transparent;
+  }
 }/*# sourceMappingURL=services.css.map */

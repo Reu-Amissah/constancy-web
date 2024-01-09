@@ -53,6 +53,12 @@ body {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
+        .material-symbols-rounded.menu {
+          display: none;
+        }
+        .drop-items {
+          display: none;
+        }
         .menu-items {
           ul {
             list-style-type: none;
@@ -202,49 +208,82 @@ body {
       }
     }
   }
-  .site-footer {
-    background: #333;
-    color: white;
-    padding: 20px 0;
-    .container {
+  
+}
+
+$header-background: #333;
+$mobile: 600px;
+$tablet: 768px;
+$desktop-xl: 1200px;
+
+/*---------------------------------
+    Mobile Nav Items
+---------------------------------*/
+
+@media (max-width: $mobile) {
+  .menu-items {
+    display: none;
+  }
+  #mobile-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: $tablet) {
+  #mobile-menu {
+    display: flex;
+  }
+  .menu-items {
+    display: none;
+  }
+
+  .drop-items {
+    position: absolute;
+    top: 100%;
+    width: 70%;
+    right: 0;
+
+    ul {
+      border: 1px solid white;
+      padding-left: 0;
+      margin-bottom: 0;
+
+      gap: 20px;
+      font-family: utils.$font-body;
+      font-size: 15px;
+
+      list-style-type: none;
+      text-transform: uppercase;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      @media (max-width: 768px) {
-        flex-direction: column;
-        text-align: center;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(40px);
+      padding: 20px;
+      padding-block: 40px;
+      border-radius: 10px;
+
+      width: 100%;
+      // text-transform: uppercase;
+      a {
+        text-decoration: none;
+        width: 40%;
+
+        li {
+          width: 100%;
+          color: white;
+          padding: 5px;
+          border-bottom: 1px solid transparent;
+          &:hover {
+            border-bottom: 1px solid white;
+          }
+        }
       }
-      .footer-logo {
-        img {
-          max-width: 100px; // set this to the size of your actual logo
-        }
-      }
-      .footer-content {
-        display: flex;
-        flex-direction: row;
-        @media (max-width: 768px) {
-          flex-direction: column;
-          .footer-nav {
-            margin-top: 10px;
-          }
-        }
-        nav.footer-nav {
-          a {
-            color: white;
-            margin: 0 10px;
-            &:hover {
-              color: #aaa;
-            }
-          }
-        }
-        .footer-social {
-          a {
-            margin: 0 5px;
-            i {
-              font-size: 16px; // Adjust the size of the icons as needed
-            }
-          }
+      .active {
+        color: utils.$primary-color;
+        &:hover {
+          border-bottom: 1px solid transparent;
         }
       }
     }
