@@ -217,7 +217,7 @@ body .contact-component .contact-container .contact-details .contact-info {
   .drop-items {
     position: absolute;
     top: 100%;
-    width: 70%;
+    width: 100%;
     right: 0;
   }
   .drop-items ul {
@@ -233,7 +233,7 @@ body .contact-component .contact-container .contact-details .contact-info {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     -webkit-backdrop-filter: blur(40px);
             backdrop-filter: blur(40px);
     padding: 20px;
@@ -259,5 +259,123 @@ body .contact-component .contact-container .contact-details .contact-info {
   }
   .drop-items ul .active:hover {
     border-bottom: 1px solid transparent;
+  }
+}
+/*--------------------------
+    Mobile MQ
+---------------------------*/
+@media (max-width: 768px) {
+  body .contact-component {
+    background-position: center;
+    background-size: cover;
+    padding-block: 50px;
+  }
+  body .contact-component .contact-container {
+    width: 85%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  body .contact-component .contact-container .contact-form {
+    width: 100%;
+  }
+  body .contact-component .contact-container .contact-details {
+    width: 100%;
+  }
+}
+/*--------------------------
+    DESKTOP MQ
+---------------------------*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  body .contact-component {
+    padding-block: 60px;
+  }
+  body .contact-component .contact-container {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  body .contact-component .contact-container .contact-form {
+    width: 55%;
+  }
+  body .contact-component .contact-container .contact-form h3 {
+    font-family: "Recia", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #084252;
+    padding-bottom: 20px;
+  }
+  body .contact-component .contact-container .contact-form .input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .contact-component .contact-container .contact-form .input-fields input {
+    outline-color: #ec9901;
+    padding: 10px;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  body .contact-component .contact-container .contact-form .input-fields textarea {
+    outline-color: #ec9901;
+    padding: 10px;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    resize: none;
+  }
+  body .contact-component .contact-container button {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #ec9901;
+    padding: 15px 25px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Supreme", sans-serif;
+    color: white;
+    background-color: #ec9901;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  body .contact-component .contact-container button:hover {
+    border: 2px solid #ec9901;
+    background-color: transparent;
+    color: #ec9901;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  body .contact-component .contact-container .contact-details {
+    width: 40%;
+  }
+  body .contact-component .contact-container .contact-details h3 {
+    font-family: "Recia", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #084252;
+    padding-bottom: 20px;
+  }
+  body .contact-component .contact-container .contact-details .contact-message {
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    padding-bottom: 5px;
+  }
+  body .contact-component .contact-container .contact-details .contact-info {
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(108, 108, 108);
   }
 }/*# sourceMappingURL=contact.css.map */

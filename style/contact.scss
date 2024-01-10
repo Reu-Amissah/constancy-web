@@ -208,7 +208,6 @@ body {
       }
     }
   }
-  
 }
 
 $header-background: #333;
@@ -240,7 +239,7 @@ $desktop-xl: 1200px;
   .drop-items {
     position: absolute;
     top: 100%;
-    width: 70%;
+    width: 100%;
     right: 0;
 
     ul {
@@ -258,7 +257,7 @@ $desktop-xl: 1200px;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(40px);
       padding: 20px;
       padding-block: 40px;
@@ -284,6 +283,132 @@ $desktop-xl: 1200px;
         color: utils.$primary-color;
         &:hover {
           border-bottom: 1px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------
+    Mobile MQ
+---------------------------*/
+
+@media (max-width: $tablet) {
+  body {
+    .contact-component {
+      background-position: center;
+      background-size: cover;
+      padding-block: 50px;
+      .contact-container {
+        width: 85%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        .contact-form {
+          width: 100%;
+        }
+        .contact-details {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------
+    DESKTOP MQ
+---------------------------*/
+
+@media (min-width: $tablet) and (max-width: $desktop-xl) {
+  body {
+    .contact-component {
+      padding-block: 60px;
+      .contact-container {
+        width: 90%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        .contact-form {
+          width: 55%;
+          h3 {
+            font-family: utils.$font-header;
+            font-size: 24px;
+            font-weight: 700;
+            color: utils.$blue;
+            padding-bottom: 20px;
+          }
+          .input-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input {
+              outline-color: utils.$primary-color;
+              padding: 10px;
+              font-family: utils.$font-body;
+              font-size: 16px;
+              font-weight: 500;
+            }
+            textarea {
+              outline-color: utils.$primary-color;
+              padding: 10px;
+              font-family: utils.$font-body;
+              font-size: 16px;
+              font-weight: 500;
+              resize: none;
+            }
+          }
+        }
+        button {
+          width: 100%;
+          background-color: transparent;
+          outline: none;
+          border: 2px solid utils.$primary-color;
+          padding: 15px 25px;
+          margin-top: 20px;
+          font-weight: 500;
+          font-size: 16px;
+          font-family: utils.$font-body;
+          color: white;
+          background-color: utils.$primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          &:hover {
+            border: 2px solid utils.$primary-color;
+            background-color: transparent;
+            color: utils.$primary-color;
+            cursor: pointer;
+            font-size: 16px;
+          }
+        }
+        .contact-details {
+          width: 40%;
+          h3 {
+            font-family: utils.$font-header;
+            font-size: 24px;
+            font-weight: 700;
+            color: utils.$blue;
+            padding-bottom: 20px;
+          }
+          .contact-message {
+            font-family: utils.$font-body;
+            font-size: 16px;
+            line-height: 1.6rem;
+            padding-bottom: 5px;
+          }
+          .contact-info {
+            font-family: utils.$font-body;
+            font-size: 16px;
+            line-height: 1.6rem;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: utils.$text-light;
+          }
         }
       }
     }

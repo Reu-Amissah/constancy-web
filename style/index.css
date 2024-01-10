@@ -190,7 +190,7 @@ body .info-component .info-container .info-items {
 body .info-component .info-container .info-items .items {
   width: 30%;
   background-color: white;
-  min-height: 210px;
+  min-height: 300px;
   padding: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -372,7 +372,7 @@ body .vision-component .mission-container .mission button:hover {
   .drop-items {
     position: absolute;
     top: 100%;
-    width: 70%;
+    width: 100%;
     right: 0;
   }
   .drop-items ul {
@@ -388,7 +388,7 @@ body .vision-component .mission-container .mission button:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     -webkit-backdrop-filter: blur(40px);
             backdrop-filter: blur(40px);
     padding: 20px;
@@ -416,6 +416,9 @@ body .vision-component .mission-container .mission button:hover {
     border-bottom: 1px solid transparent;
   }
 }
+/*--------------------------
+    Mobile MQ
+---------------------------*/
 @media (max-width: 768px) {
   body header .hero .hero-content {
     width: 100%;
@@ -547,6 +550,183 @@ body .vision-component .mission-container .mission button:hover {
     display: flex;
     justify-content: center;
     gap: 5px;
+  }
+  body .vision-component .mission-container .mission button {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #ec9901;
+    padding: 15px 25px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Supreme", sans-serif;
+    color: white;
+    background-color: #ec9901;
+  }
+  body .vision-component .mission-container .mission button:hover {
+    border: 2px solid #ec9901;
+    background-color: transparent;
+    color: #ec9901;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+/*--------------------------
+    DESKTOP MQ
+---------------------------*/
+@media (min-width: 768px) and (max-width: 1250px) {
+  body header .hero .hero-content {
+    width: 85%;
+    gap: 7px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  body header .hero .hero-content .hero-subtitle {
+    text-align: left;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6rem;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  body header .hero .hero-content .hero-title {
+    text-align: left;
+    display: flex;
+    margin-block: 20px;
+    font-size: 30px;
+  }
+  body header .hero .hero-content .request-button {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background-color: transparent;
+    color: #ec9901;
+    border: 1px solid #ec9901;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    padding: 10px 15px;
+    gap: 7px;
+    margin-top: 10px;
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+  }
+  body header .hero .hero-content .request-button:hover {
+    background-color: #ec9901;
+    color: white;
+    cursor: pointer;
+  }
+  body .info-component {
+    background-image: url("../assets/infobg1.svg");
+    background-position: center;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    padding: 70px 50px;
+    border-radius: 5px;
+    color: black;
+  }
+  body .info-component h1 {
+    margin: 0;
+  }
+  body .info-component .info-container {
+    margin-top: 30px;
+    width: 85%;
+    margin-inline: auto;
+  }
+  body .info-component .info-container .info-items {
+    color: black;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+    gap: 20px;
+  }
+  body .info-component .info-container .info-items .items {
+    width: 100%;
+    background-color: white;
+    min-height: 210px;
+    padding: 20px;
+  }
+  body .info-component .info-container .info-items .items:hover {
+    box-shadow: 2px 2px 2px #084252;
+    border: 1px solid #084252;
+  }
+  body .mission-component {
+    background-image: url("../assets/missionbg.svg");
+    background-position: center;
+    background-size: cover;
+    padding-block: 60px;
+  }
+  body .mission-component .mission-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin-inline: auto;
+    align-items: center;
+  }
+  body .mission-component .mission-container .mission-illustration {
+    background-image: url(../assets/ill1.jpg);
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  body .mission-component .mission-container .mission-illustration:hover {
+    border-radius: 10px;
+  }
+  body .mission-component .mission-container .mission {
+    width: 100%;
+  }
+  body .mission-component .mission-container .mission h3 {
+    font-family: "Recia", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #084252;
+    padding-bottom: 0;
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+  }
+  body .mission-component .mission-container .mission h3 p {
+    color: #ec9901;
+  }
+  body .mission-component .mission-container .mission .mission-detail {
+    line-height: 1.6rem;
+    font-size: 16px;
+    font-family: "Supreme", sans-serif;
+  }
+  body .mission-component .mission-container .mission button {
+    width: 100%;
+  }
+  body .vision-component {
+    padding-block: 60px;
+  }
+  body .vision-component .mission-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+    align-items: center;
+  }
+  body .vision-component .mission-container .mission {
+    width: 75%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
+    padding: 20px;
   }
   body .vision-component .mission-container .mission button {
     width: 100%;

@@ -16,7 +16,7 @@ sections.forEach((section) => {
       toggleActions: "play none none none",
     },
     opacity: 0,
-    duration: 1,
+    duration: 0.7,
   });
 });
 
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let menuItems = document.getElementById("drop-items");
 
   let tabletBreakpoint = 768;
-
 
   function adjustMenuDisplay() {
     if (window.innerWidth <= tabletBreakpoint) {

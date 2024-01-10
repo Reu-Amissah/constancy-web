@@ -261,7 +261,7 @@ body {
           font-family: utils.$font-body;
           font-size: 16px;
           line-height: 1.6rem;
-          text-align: justify;
+          text-align: left;
           p {
             font-size: 24px;
             padding-bottom: 10px;
@@ -502,7 +502,7 @@ body {
 $header-background: #333;
 $mobile: 600px;
 $tablet: 768px;
-$desktop-xl: 1200px;
+$desktop-xl: 1250px;
 
 /*---------------------------------
     Mobile Nav Items
@@ -528,7 +528,7 @@ $desktop-xl: 1200px;
   .drop-items {
     position: absolute;
     top: 100%;
-    width: 70%;
+    width: 100%;
     right: 0;
 
     ul {
@@ -546,7 +546,7 @@ $desktop-xl: 1200px;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(40px);
       padding: 20px;
       padding-block: 40px;
@@ -572,6 +572,583 @@ $desktop-xl: 1200px;
         color: utils.$primary-color;
         &:hover {
           border-bottom: 1px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------
+  Mobile MQ
+---------------------------*/
+
+@media (max-width: $tablet) {
+  body {
+    .who-component {
+      padding-block: 50px;
+      .who-container {
+        width: 90%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+        .who-image {
+          width: 100%;
+        }
+
+        .who-content {
+          width: 100%;
+          .who-are-we {
+            h3 {
+              font-family: utils.$font-header;
+              font-size: 30px;
+              font-weight: 700;
+              padding-bottom: 0;
+              display: flex;
+
+              color: utils.$blue;
+              gap: 5px;
+              p {
+                color: utils.$primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mission-component {
+      padding-block: 50px;
+      .mission-container {
+        width: 90%;
+        margin-inline: auto;
+        .mission {
+          text-align: center;
+
+          .mission-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .mission-items {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              width: 100%;
+              span {
+                font-size: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .message-component {
+      padding-block: 50px;
+      background-image: url("../assets/letterbg1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-position-x: 5%;
+
+      .message-container {
+        width: 90%;
+        margin-inline: auto;
+        .message-header {
+          font-family: utils.$font-body;
+          font-size: 16px;
+          line-height: 1.6rem;
+          margin-bottom: 20px;
+          h3 {
+            padding: 0;
+            margin: 0;
+            font-family: utils.$font-header;
+            font-size: 26px;
+            font-weight: 700;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .phil-component {
+      padding-block: 50px;
+      .phil-container {
+        width: 90%;
+        .phil-header {
+          margin-bottom: 40px;
+          h3 {
+            font-family: utils.$font-header;
+            font-size: 30px;
+            font-weight: 700;
+            padding-bottom: 0;
+            display: flex;
+            color: utils.$blue;
+            gap: 5px;
+            p {
+              color: utils.$primary-color;
+            }
+          }
+        }
+        .phil-content {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .phil-items {
+            width: 100%;
+            min-height: 200px;
+            padding-block: 10px;
+
+            p {
+              font-size: 24px;
+              padding-bottom: 10px;
+              color: utils.$text-light;
+            }
+            h3 {
+              padding: 0;
+              margin: 0;
+              font-family: utils.$font-header;
+              font-size: 20px;
+              font-weight: 700;
+              padding-bottom: 10px;
+              color: utils.$blue;
+            }
+          }
+        }
+        .result-creed {
+          display: flex;
+          justify-content: space-between;
+          gap: 30px;
+          .result-container {
+            width: 40%;
+            background-color: white;
+            padding-inline: 30px;
+            padding-block: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-family: utils.$font-body;
+            font-size: 16px;
+            line-height: 1.6rem;
+            color: utils.$text-light;
+            h3 {
+              font-family: utils.$font-header;
+              font-size: 20px;
+              padding-bottom: 20px;
+              color: utils.$blue;
+            }
+          }
+          .creed-container {
+            width: 60%;
+            background-color: white;
+            padding-inline: 30px;
+            padding-block: 50px;
+
+            font-family: utils.$font-body;
+            font-size: 16px;
+            line-height: 1.6rem;
+            color: utils.$text-light;
+
+            h3 {
+              font-family: utils.$font-header;
+              font-size: 24px;
+              font-weight: 700;
+              padding-bottom: 20px;
+              display: flex;
+              color: utils.$blue;
+              gap: 5px;
+              p {
+                color: utils.$primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .hiring-component {
+      background-position-y: 30%;
+      background-position-x: 40%;
+      .hiring-dark {
+        padding-block: 50px;
+
+        .hiring-container {
+          width: 90%;
+          margin-inline: auto;
+
+          .hiring {
+            font-family: utils.$font-header;
+            font-size: 30px;
+
+            gap: 5px;
+          }
+          .hiring-body {
+            color: white;
+            text-align: center;
+          }
+          .hiring-form {
+            background-color: white;
+            padding: 25px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+            background-position-x: 10%;
+
+            .phil-2 {
+              font-family: utils.$font-body;
+              line-height: 1.6rem;
+              font-size: 16px;
+              text-align: center;
+              h3 {
+                font-family: utils.$font-header;
+                color: utils.$blue;
+                font-size: 30px;
+                margin-bottom: 15px;
+              }
+            }
+            form {
+              margin-top: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-family: utils.$font-body;
+              label {
+                margin-bottom: 20px;
+                text-align: center;
+              }
+              .hiring-input {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                button {
+                  margin-top: 10px;
+                  width: 80%;
+                  background-color: utils.$blue;
+                  color: white;
+                  padding: 10px;
+                  border: none;
+                  border-radius: 5px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 3px;
+                  border: 1px solid transparent;
+                  &:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                  }
+                }
+                input {
+                  background-color: utils.$background-light;
+                  width: 80%;
+                }
+                input[type="file"]::file-selector-button {
+                  background-color: utils.$blue;
+                  color: white;
+                  padding: 10px;
+                  height: 40px;
+                  border: none;
+                  border-radius: 5px;
+                  &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #scrollContainer {
+      padding-block: 50px;
+      .scroll-title {
+        font-family: utils.$font-header;
+        font-size: 26px;
+        font-weight: 700;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      .scroll-container {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin-inline: auto;
+
+        #scrollableDiv {
+          overflow-x: hidden;
+          white-space: nowrap;
+          scroll-behavior: smooth;
+          display: flex;
+          gap: 10px;
+          .workers {
+            text-align: center;
+            padding: 20px;
+            font-family: utils.$font-body;
+            font-size: 16px;
+            line-height: 1.6rem;
+            color: utils.$text-light;
+
+            h3 {
+              font-family: utils.$font-header;
+              font-size: 22px;
+              color: utils.$blue;
+              padding-bottom: 5px;
+            }
+          }
+        }
+        #leftBtn {
+          position: relative;
+          left: -10px;
+        }
+        #rightBtn {
+          position: relative;
+          right: -10px;
+        }
+        button {
+          background-color: utils.$background-light;
+          border: 0;
+          border-radius: 5px;
+          cursor: pointer;
+
+          padding: 10px;
+          span {
+            font-size: 26px;
+            color: utils.$text-light;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------
+    DESKTOP MQ
+---------------------------*/
+
+@media (min-width: $tablet) and (max-width: $desktop-xl) {
+  body {
+    .mission-component {
+      padding-block: 60px;
+      background-image: url("../assets/missionbg3.jpg");
+      background-position: center;
+      background-size: cover;
+      background-position-x: 25%;
+      .mission-container {
+        width: 85%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        .mission {
+          text-align: center;
+
+          h3 {
+            font-family: utils.$font-header;
+            font-size: 30px;
+            font-weight: 700;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            color: utils.$blue;
+            gap: 5px;
+          }
+          .mission-detail {
+            line-height: 1.6rem;
+            font-size: 16px;
+            font-family: utils.$font-body;
+            display: flex;
+            justify-content: space-between;
+            // text-align: justify;
+            .mission-items {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              width: 33%;
+              span {
+                color: utils.$text-light;
+                font-size: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .message-component {
+      padding-block: 60px;
+      background-image: url("../assets/letterbg1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-position-x: 25%;
+
+      .message-container {
+        width: 85%;
+        margin-inline: auto;
+        .message-header {
+          font-family: utils.$font-body;
+          font-size: 16px;
+          line-height: 1.6rem;
+          margin-bottom: 30px;
+          h3 {
+            padding: 0;
+            margin: 0;
+            font-family: utils.$font-header;
+            font-size: 30px;
+            font-weight: 700;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+          }
+        }
+        .message-body {
+          text-align: justify;
+          font-family: utils.$font-body;
+          font-size: 16px;
+          line-height: 2rem;
+        }
+      }
+    }
+    .phil-component {
+      padding-block: 60px;
+      .phil-container {
+        width: 85%;
+        margin-inline: auto;
+        .phil-header {
+          margin-bottom: 60px;
+          h3 {
+            font-family: utils.$font-header;
+            font-size: 30px;
+            font-weight: 700;
+            padding-bottom: 20px;
+            display: flex;
+            color: utils.$blue;
+            gap: 5px;
+            p {
+              color: utils.$primary-color;
+            }
+          }
+        }
+        .phil-content {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: start;
+          justify-content: space-between;
+
+          .phil-items {
+            width: 47%;
+            min-height: 250px;
+            font-family: utils.$font-body;
+            font-size: 16px;
+            line-height: 1.6rem;
+            text-align: justify;
+          }
+        }
+      }
+    }
+    .hiring-component {
+      background-image: url("../assets/we_hiring.jpg");
+      background-position: center;
+      background-size: cover;
+      background-position-y: 40%;
+      background-position-x: 50%;
+      .hiring-dark {
+        padding-block: 60px;
+        background-color: rgba(3, 38, 51, 0.6);
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+
+        .hiring-container {
+          width: 70%;
+          margin-inline: auto;
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          align-items: center;
+
+          .hiring {
+            font-family: utils.$font-header;
+            font-size: 30px;
+            font-weight: 700;
+            padding-bottom: 20px;
+            display: flex;
+            color: rgb(159, 18, 18);
+            gap: 5px;
+          }
+          .hiring-body {
+            font-family: utils.$font-body;
+            font-size: 16px;
+            line-height: 2rem;
+            font-weight: 500;
+            color: white;
+            text-align: center;
+          }
+          .hiring-form {
+            background-color: white;
+            padding: 40px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            background-image: url("../assets/letterbg1.jpg");
+            background-position: center;
+            background-size: cover;
+            background-position-x: 25%;
+
+            .phil-2 {
+              font-family: utils.$font-body;
+              line-height: 1.6rem;
+              font-size: 16px;
+              text-align: center;
+              h3 {
+                font-family: utils.$font-header;
+                color: utils.$blue;
+                font-size: 30px;
+                margin-bottom: 20px;
+              }
+            }
+            form {
+              margin-top: 40px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-family: utils.$font-body;
+              label {
+                margin-bottom: 30px;
+                text-align: center;
+              }
+              .hiring-input {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                  background-color: utils.$blue;
+                  color: white;
+                  padding: 10px;
+                  border: none;
+                  border-radius: 5px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 3px;
+                  border: 1px solid transparent;
+                  &:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                  }
+                }
+                input[type="file"]::file-selector-button {
+                  background-color: utils.$blue;
+                  color: white;
+                  padding: 10px;
+                  height: 40px;
+                  border: none;
+                  border-radius: 5px;
+                  &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

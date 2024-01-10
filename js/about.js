@@ -1,9 +1,9 @@
 document.getElementById("leftBtn").addEventListener("click", function () {
-  document.getElementById("scrollableDiv").scrollLeft -= 300;
+  document.getElementById("scrollableDiv").scrollLeft -= 100;
 });
 
 document.getElementById("rightBtn").addEventListener("click", function () {
-  document.getElementById("scrollableDiv").scrollLeft += 300;
+  document.getElementById("scrollableDiv").scrollLeft += 100;
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +28,7 @@ components.forEach((component) => {
       toggleActions: "play none none none",
     },
     opacity: 0,
-    duration: 1,
+    duration: 0.7,
   });
 });
 

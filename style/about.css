@@ -251,7 +251,7 @@ body .phil-component .phil-container .phil-content .phil-items {
   font-family: "Supreme", sans-serif;
   font-size: 16px;
   line-height: 1.6rem;
-  text-align: justify;
+  text-align: left;
 }
 body .phil-component .phil-container .phil-content .phil-items p {
   font-size: 24px;
@@ -497,7 +497,7 @@ body #scrollContainer .scroll-container button span {
   .drop-items {
     position: absolute;
     top: 100%;
-    width: 70%;
+    width: 100%;
     right: 0;
   }
   .drop-items ul {
@@ -513,7 +513,7 @@ body #scrollContainer .scroll-container button span {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     -webkit-backdrop-filter: blur(40px);
             backdrop-filter: blur(40px);
     padding: 20px;
@@ -539,5 +539,548 @@ body #scrollContainer .scroll-container button span {
   }
   .drop-items ul .active:hover {
     border-bottom: 1px solid transparent;
+  }
+}
+/*--------------------------
+  Mobile MQ
+---------------------------*/
+@media (max-width: 768px) {
+  body .who-component {
+    padding-block: 50px;
+  }
+  body .who-component .who-container {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  body .who-component .who-container .who-image {
+    width: 100%;
+  }
+  body .who-component .who-container .who-content {
+    width: 100%;
+  }
+  body .who-component .who-container .who-content .who-are-we h3 {
+    font-family: "Recia", serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 0;
+    display: flex;
+    color: #084252;
+    gap: 5px;
+  }
+  body .who-component .who-container .who-content .who-are-we h3 p {
+    color: #ec9901;
+  }
+  body .mission-component {
+    padding-block: 50px;
+  }
+  body .mission-component .mission-container {
+    width: 90%;
+    margin-inline: auto;
+  }
+  body .mission-component .mission-container .mission {
+    text-align: center;
+  }
+  body .mission-component .mission-container .mission .mission-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .mission-component .mission-container .mission .mission-detail .mission-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  body .mission-component .mission-container .mission .mission-detail .mission-items span {
+    font-size: 35px;
+  }
+  body .message-component {
+    padding-block: 50px;
+    background-image: url("../assets/letterbg1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-x: 5%;
+  }
+  body .message-component .message-container {
+    width: 90%;
+    margin-inline: auto;
+  }
+  body .message-component .message-container .message-header {
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    margin-bottom: 20px;
+  }
+  body .message-component .message-container .message-header h3 {
+    padding: 0;
+    margin: 0;
+    font-family: "Recia", serif;
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  body .phil-component {
+    padding-block: 50px;
+  }
+  body .phil-component .phil-container {
+    width: 90%;
+  }
+  body .phil-component .phil-container .phil-header {
+    margin-bottom: 40px;
+  }
+  body .phil-component .phil-container .phil-header h3 {
+    font-family: "Recia", serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 0;
+    display: flex;
+    color: #084252;
+    gap: 5px;
+  }
+  body .phil-component .phil-container .phil-header h3 p {
+    color: #ec9901;
+  }
+  body .phil-component .phil-container .phil-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  body .phil-component .phil-container .phil-content .phil-items {
+    width: 100%;
+    min-height: 200px;
+    padding-block: 10px;
+  }
+  body .phil-component .phil-container .phil-content .phil-items p {
+    font-size: 24px;
+    padding-bottom: 10px;
+    color: rgb(108, 108, 108);
+  }
+  body .phil-component .phil-container .phil-content .phil-items h3 {
+    padding: 0;
+    margin: 0;
+    font-family: "Recia", serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: #084252;
+  }
+  body .phil-component .phil-container .result-creed {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  body .phil-component .phil-container .result-creed .result-container {
+    width: 40%;
+    background-color: white;
+    padding-inline: 30px;
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    color: rgb(108, 108, 108);
+  }
+  body .phil-component .phil-container .result-creed .result-container h3 {
+    font-family: "Recia", serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: #084252;
+  }
+  body .phil-component .phil-container .result-creed .creed-container {
+    width: 60%;
+    background-color: white;
+    padding-inline: 30px;
+    padding-block: 50px;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    color: rgb(108, 108, 108);
+  }
+  body .phil-component .phil-container .result-creed .creed-container h3 {
+    font-family: "Recia", serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: flex;
+    color: #084252;
+    gap: 5px;
+  }
+  body .phil-component .phil-container .result-creed .creed-container h3 p {
+    color: #ec9901;
+  }
+  body .hiring-component {
+    background-position-y: 30%;
+    background-position-x: 40%;
+  }
+  body .hiring-component .hiring-dark {
+    padding-block: 50px;
+  }
+  body .hiring-component .hiring-dark .hiring-container {
+    width: 90%;
+    margin-inline: auto;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring {
+    font-family: "Recia", serif;
+    font-size: 30px;
+    gap: 5px;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-body {
+    color: white;
+    text-align: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form {
+    background-color: white;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-position-x: 10%;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form .phil-2 {
+    font-family: "Supreme", sans-serif;
+    line-height: 1.6rem;
+    font-size: 16px;
+    text-align: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form .phil-2 h3 {
+    font-family: "Recia", serif;
+    color: #084252;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Supreme", sans-serif;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form label {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input button {
+    margin-top: 10px;
+    width: 80%;
+    background-color: #084252;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border: 1px solid transparent;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input input {
+    background-color: rgba(228, 228, 228, 0.5);
+    width: 80%;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input input[type=file]::file-selector-button {
+    background-color: #084252;
+    color: white;
+    padding: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input input[type=file]::file-selector-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  body #scrollContainer {
+    padding-block: 50px;
+  }
+  body #scrollContainer .scroll-title {
+    font-family: "Recia", serif;
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  body #scrollContainer .scroll-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-inline: auto;
+  }
+  body #scrollContainer .scroll-container #scrollableDiv {
+    overflow-x: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    display: flex;
+    gap: 10px;
+  }
+  body #scrollContainer .scroll-container #scrollableDiv .workers {
+    text-align: center;
+    padding: 20px;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    color: rgb(108, 108, 108);
+  }
+  body #scrollContainer .scroll-container #scrollableDiv .workers h3 {
+    font-family: "Recia", serif;
+    font-size: 22px;
+    color: #084252;
+    padding-bottom: 5px;
+  }
+  body #scrollContainer .scroll-container #leftBtn {
+    position: relative;
+    left: -10px;
+  }
+  body #scrollContainer .scroll-container #rightBtn {
+    position: relative;
+    right: -10px;
+  }
+  body #scrollContainer .scroll-container button {
+    background-color: rgba(228, 228, 228, 0.5);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  body #scrollContainer .scroll-container button span {
+    font-size: 26px;
+    color: rgb(108, 108, 108);
+    text-align: center;
+  }
+}
+/*--------------------------
+    DESKTOP MQ
+---------------------------*/
+@media (min-width: 768px) and (max-width: 1250px) {
+  body .mission-component {
+    padding-block: 60px;
+    background-image: url("../assets/missionbg3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-x: 25%;
+  }
+  body .mission-component .mission-container {
+    width: 85%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .mission-component .mission-container .mission {
+    text-align: center;
+  }
+  body .mission-component .mission-container .mission h3 {
+    font-family: "Recia", serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    color: #084252;
+    gap: 5px;
+  }
+  body .mission-component .mission-container .mission .mission-detail {
+    line-height: 1.6rem;
+    font-size: 16px;
+    font-family: "Supreme", sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .mission-component .mission-container .mission .mission-detail .mission-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 33%;
+  }
+  body .mission-component .mission-container .mission .mission-detail .mission-items span {
+    color: rgb(108, 108, 108);
+    font-size: 40px;
+  }
+  body .message-component {
+    padding-block: 60px;
+    background-image: url("../assets/letterbg1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-x: 25%;
+  }
+  body .message-component .message-container {
+    width: 85%;
+    margin-inline: auto;
+  }
+  body .message-component .message-container .message-header {
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    margin-bottom: 30px;
+  }
+  body .message-component .message-container .message-header h3 {
+    padding: 0;
+    margin: 0;
+    font-family: "Recia", serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  body .message-component .message-container .message-body {
+    text-align: justify;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 2rem;
+  }
+  body .phil-component {
+    padding-block: 60px;
+  }
+  body .phil-component .phil-container {
+    width: 85%;
+    margin-inline: auto;
+  }
+  body .phil-component .phil-container .phil-header {
+    margin-bottom: 60px;
+  }
+  body .phil-component .phil-container .phil-header h3 {
+    font-family: "Recia", serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: flex;
+    color: #084252;
+    gap: 5px;
+  }
+  body .phil-component .phil-container .phil-header h3 p {
+    color: #ec9901;
+  }
+  body .phil-component .phil-container .phil-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+  }
+  body .phil-component .phil-container .phil-content .phil-items {
+    width: 47%;
+    min-height: 250px;
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    text-align: justify;
+  }
+  body .hiring-component {
+    background-image: url("../assets/we_hiring.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: 40%;
+    background-position-x: 50%;
+  }
+  body .hiring-component .hiring-dark {
+    padding-block: 60px;
+    background-color: rgba(3, 38, 51, 0.6);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+  }
+  body .hiring-component .hiring-dark .hiring-container {
+    width: 70%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring {
+    font-family: "Recia", serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: flex;
+    color: rgb(159, 18, 18);
+    gap: 5px;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-body {
+    font-family: "Supreme", sans-serif;
+    font-size: 16px;
+    line-height: 2rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form {
+    background-color: white;
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-image: url("../assets/letterbg1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-x: 25%;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form .phil-2 {
+    font-family: "Supreme", sans-serif;
+    line-height: 1.6rem;
+    font-size: 16px;
+    text-align: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form .phil-2 h3 {
+    font-family: "Recia", serif;
+    color: #084252;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Supreme", sans-serif;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form label {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input button {
+    background-color: #084252;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border: 1px solid transparent;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input input[type=file]::file-selector-button {
+    background-color: #084252;
+    color: white;
+    padding: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+  }
+  body .hiring-component .hiring-dark .hiring-container .hiring-form form .hiring-input input[type=file]::file-selector-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
   }
 }/*# sourceMappingURL=about.css.map */
