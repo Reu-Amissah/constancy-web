@@ -19,9 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Send the email
   
   if (mail($to, $subject, $mail_body, $headers)) {
-    echo '<script type="text/javascript">alert("Your message was sent!");</script>';
+    echo '<script type="text/javascript">';
+    echo 'alert("Your message was sent!");';
+    echo 'window.location.href = "Contact.html";';
+    echo '</script>';
   } else {
-    echo '<script type="text/javascript">window.location.href = window.location.href;</script>';
+    echo '<script type="text/javascript">';
+    echo 'alert("Failed to send your message!");';
+    echo 'window.location.href = "Contact.html";'; 
+    echo '</script>';
   }
 }
 ?>

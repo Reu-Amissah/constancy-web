@@ -198,14 +198,20 @@ body {
     }
   }
   .message-component {
-    padding-block: 80px;
     background-image: url("../assets/letterbg1.jpg");
     background-position: center;
     background-size: cover;
     background-position-x: 25%;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    gap: 30px;
+    padding-left: 50px;
 
     .message-container {
+      padding-block: 80px;
       width: 80%;
+
       margin-inline: auto;
       .message-header {
         font-family: utils.$font-body;
@@ -228,6 +234,13 @@ body {
         font-size: 16px;
         line-height: 2rem;
       }
+    }
+    .img-msg {
+      background-image: url("../assets/admin.jpg");
+      background-position: center;
+      background-size: cover;
+      background-position-x: 25%;
+      width: 30%;
     }
   }
   .phil-component {
@@ -497,6 +510,33 @@ body {
       }
     }
   }
+  .to-top {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    #to-top {
+      z-index: 2;
+      position: relative;
+top: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      background-color: utils.$primary-color;
+      color: white;
+      &:hover{
+        border: 2px solid utils.$primary-color;
+        background-color: white;
+        color: utils.$blue;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 $header-background: #333;
@@ -643,30 +683,27 @@ $desktop-xl: 1250px;
       }
     }
     .message-component {
-      padding-block: 50px;
       background-image: url("../assets/letterbg1.jpg");
       background-position: center;
       background-size: cover;
       background-position-x: 5%;
+      display: flex;
+      flex-direction: column-reverse;
+      height: fit-content;
+      padding-left: 0;
+      gap: 20px;
 
       .message-container {
+        padding-block: 80px;
         width: 90%;
-        margin-inline: auto;
-        .message-header {
-          font-family: utils.$font-body;
-          font-size: 16px;
-          line-height: 1.6rem;
-          margin-bottom: 20px;
-          h3 {
-            padding: 0;
-            margin: 0;
-            font-family: utils.$font-header;
-            font-size: 26px;
-            font-weight: 700;
-            padding-bottom: 5px;
-            text-transform: uppercase;
-          }
-        }
+      }
+      .img-msg {
+        background-image: url("../assets/admin.jpg");
+        background-position: center;
+        background-size: cover;
+        background-position-y: 15%;
+        width: 100%;
+        height: 500px;
       }
     }
     .phil-component {
@@ -975,36 +1012,27 @@ $desktop-xl: 1250px;
       }
     }
     .message-component {
-      padding-block: 60px;
       background-image: url("../assets/letterbg1.jpg");
       background-position: center;
       background-size: cover;
-      background-position-x: 25%;
+      background-position-x: 5%;
+      display: flex;
+      flex-direction: column-reverse;
+      height: fit-content;
+      padding-left: 0;
+      gap: 20px;
 
       .message-container {
-        width: 85%;
-        margin-inline: auto;
-        .message-header {
-          font-family: utils.$font-body;
-          font-size: 16px;
-          line-height: 1.6rem;
-          margin-bottom: 30px;
-          h3 {
-            padding: 0;
-            margin: 0;
-            font-family: utils.$font-header;
-            font-size: 30px;
-            font-weight: 700;
-            padding-bottom: 5px;
-            text-transform: uppercase;
-          }
-        }
-        .message-body {
-          text-align: justify;
-          font-family: utils.$font-body;
-          font-size: 16px;
-          line-height: 2rem;
-        }
+        padding-block: 80px;
+        width: 90%;
+      }
+      .img-msg {
+        background-image: url("../assets/admin.jpg");
+        background-position: center;
+        background-size: cover;
+        background-position-y: 20%;
+        width: 100%;
+        height: 600px;
       }
     }
     .phil-component {

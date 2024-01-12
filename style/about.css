@@ -187,13 +187,19 @@ body .mission-component .mission-container .mission .mission-detail .mission-ite
   font-size: 40px;
 }
 body .message-component {
-  padding-block: 80px;
   background-image: url("../assets/letterbg1.jpg");
   background-position: center;
   background-size: cover;
   background-position-x: 25%;
+  display: flex;
+  justify-content: space-between;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 30px;
+  padding-left: 50px;
 }
 body .message-component .message-container {
+  padding-block: 80px;
   width: 80%;
   margin-inline: auto;
 }
@@ -217,6 +223,13 @@ body .message-component .message-container .message-body {
   font-family: "Supreme", sans-serif;
   font-size: 16px;
   line-height: 2rem;
+}
+body .message-component .img-msg {
+  background-image: url("../assets/admin.jpg");
+  background-position: center;
+  background-size: cover;
+  background-position-x: 25%;
+  width: 30%;
 }
 body .phil-component {
   padding-block: 80px;
@@ -475,6 +488,33 @@ body #scrollContainer .scroll-container button span {
   color: rgb(108, 108, 108);
   text-align: center;
 }
+body .to-top {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+body .to-top #to-top {
+  z-index: 2;
+  position: relative;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  background-color: #ec9901;
+  color: white;
+}
+body .to-top #to-top:hover {
+  border: 2px solid #ec9901;
+  background-color: white;
+  color: #084252;
+  cursor: pointer;
+}
 
 /*---------------------------------
     Mobile Nav Items
@@ -599,30 +639,28 @@ body #scrollContainer .scroll-container button span {
     font-size: 35px;
   }
   body .message-component {
-    padding-block: 50px;
     background-image: url("../assets/letterbg1.jpg");
     background-position: center;
     background-size: cover;
     background-position-x: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-left: 0;
+    gap: 20px;
   }
   body .message-component .message-container {
+    padding-block: 80px;
     width: 90%;
-    margin-inline: auto;
   }
-  body .message-component .message-container .message-header {
-    font-family: "Supreme", sans-serif;
-    font-size: 16px;
-    line-height: 1.6rem;
-    margin-bottom: 20px;
-  }
-  body .message-component .message-container .message-header h3 {
-    padding: 0;
-    margin: 0;
-    font-family: "Recia", serif;
-    font-size: 26px;
-    font-weight: 700;
-    padding-bottom: 5px;
-    text-transform: uppercase;
+  body .message-component .img-msg {
+    background-image: url("../assets/admin.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: 15%;
+    width: 100%;
+    height: 500px;
   }
   body .phil-component {
     padding-block: 50px;
@@ -912,36 +950,28 @@ body #scrollContainer .scroll-container button span {
     font-size: 40px;
   }
   body .message-component {
-    padding-block: 60px;
     background-image: url("../assets/letterbg1.jpg");
     background-position: center;
     background-size: cover;
-    background-position-x: 25%;
+    background-position-x: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-left: 0;
+    gap: 20px;
   }
   body .message-component .message-container {
-    width: 85%;
-    margin-inline: auto;
+    padding-block: 80px;
+    width: 90%;
   }
-  body .message-component .message-container .message-header {
-    font-family: "Supreme", sans-serif;
-    font-size: 16px;
-    line-height: 1.6rem;
-    margin-bottom: 30px;
-  }
-  body .message-component .message-container .message-header h3 {
-    padding: 0;
-    margin: 0;
-    font-family: "Recia", serif;
-    font-size: 30px;
-    font-weight: 700;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-  }
-  body .message-component .message-container .message-body {
-    text-align: justify;
-    font-family: "Supreme", sans-serif;
-    font-size: 16px;
-    line-height: 2rem;
+  body .message-component .img-msg {
+    background-image: url("../assets/admin.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: 20%;
+    width: 100%;
+    height: 600px;
   }
   body .phil-component {
     padding-block: 60px;

@@ -77,3 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
     menuItems.style.display = "none";
   }
 });
+
+
+let toTopButton = document.getElementById("to-top");
+
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
