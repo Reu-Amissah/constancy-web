@@ -192,24 +192,30 @@ body .message-component {
   background-size: cover;
   background-position-x: 25%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   height: -moz-fit-content;
   height: fit-content;
   gap: 30px;
-  padding-left: 50px;
 }
-body .message-component .message-container {
+body .message-component .message-box {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 20px;
+}
+body .message-component .message-box .message-container {
   padding-block: 80px;
-  width: 80%;
   margin-inline: auto;
 }
-body .message-component .message-container .message-header {
+body .message-component .message-box .message-container .message-header {
   font-family: "Supreme", sans-serif;
   font-size: 16px;
   line-height: 1.6rem;
   margin-bottom: 30px;
 }
-body .message-component .message-container .message-header h3 {
+body .message-component .message-box .message-container .message-header h3 {
   padding: 0;
   margin: 0;
   font-family: "Recia", serif;
@@ -218,18 +224,18 @@ body .message-component .message-container .message-header h3 {
   padding-bottom: 5px;
   text-transform: uppercase;
 }
-body .message-component .message-container .message-body {
+body .message-component .message-box .message-container .message-body {
   text-align: justify;
   font-family: "Supreme", sans-serif;
   font-size: 16px;
   line-height: 2rem;
 }
-body .message-component .img-msg {
-  background-image: url("../assets/admin.jpg");
-  background-position: center;
+body .message-component .message-box .img-msg {
+  background-image: url("../assets/admin.png");
   background-size: cover;
-  background-position-x: 25%;
-  width: 30%;
+  background-position-x: 35%;
+  background-position-y: 80%;
+  width: 100%;
 }
 body .phil-component {
   padding-block: 80px;
@@ -644,18 +650,23 @@ body .to-top #to-top:hover {
     background-size: cover;
     background-position-x: 5%;
     display: flex;
-    flex-direction: column-reverse;
     height: -moz-fit-content;
     height: fit-content;
-    padding-left: 0;
+    justify-content: center;
     gap: 20px;
   }
-  body .message-component .message-container {
+  body .message-component .message-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  body .message-component .message-box .message-container {
     padding-block: 80px;
     width: 90%;
   }
-  body .message-component .img-msg {
-    background-image: url("../assets/admin.jpg");
+  body .message-component .message-box .img-msg {
+    background-image: url("../assets/admin.png");
     background-position: center;
     background-size: cover;
     background-position-y: 15%;
@@ -955,18 +966,23 @@ body .to-top #to-top:hover {
     background-size: cover;
     background-position-x: 5%;
     display: flex;
-    flex-direction: column-reverse;
     height: -moz-fit-content;
     height: fit-content;
-    padding-left: 0;
+    justify-content: center;
     gap: 20px;
   }
-  body .message-component .message-container {
-    padding-block: 80px;
-    width: 90%;
+  body .message-component .message-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
-  body .message-component .img-msg {
-    background-image: url("../assets/admin.jpg");
+  body .message-component .message-box .message-container {
+    padding-block: 80px;
+    width: 85%;
+  }
+  body .message-component .message-box .img-msg {
+    background-image: url("../assets/admin.png");
     background-position: center;
     background-size: cover;
     background-position-y: 20%;

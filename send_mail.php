@@ -21,12 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (mail($to, $subject, $mail_body, $headers)) {
     echo '<script type="text/javascript">';
     echo 'alert("Your message was sent!");';
-    echo 'window.location.href = "Contact.html";';
+    echo 'window.location.href = "index.html";';
     echo '</script>';
   } else {
     echo '<script type="text/javascript">';
     echo 'alert("Failed to send your message!");';
-    echo 'window.location.href = "Contact.html";'; 
+    echo 'window.location.href = "index.html";'; 
     echo '</script>';
   }
 }

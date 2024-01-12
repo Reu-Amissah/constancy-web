@@ -203,44 +203,50 @@ body {
     background-size: cover;
     background-position-x: 25%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     height: fit-content;
     gap: 30px;
-    padding-left: 50px;
 
-    .message-container {
-      padding-block: 80px;
-      width: 80%;
+    .message-box {
+      width: 90%;
+      display: flex;
+      justify-content: end;
+      height: fit-content;
+      gap: 20px;
+      .message-container {
+        padding-block: 80px;
 
-      margin-inline: auto;
-      .message-header {
-        font-family: utils.$font-body;
-        font-size: 16px;
-        line-height: 1.6rem;
-        margin-bottom: 30px;
-        h3 {
-          padding: 0;
-          margin: 0;
-          font-family: utils.$font-header;
-          font-size: 30px;
-          font-weight: 700;
-          padding-bottom: 5px;
-          text-transform: uppercase;
+        margin-inline: auto;
+        .message-header {
+          font-family: utils.$font-body;
+          font-size: 16px;
+          line-height: 1.6rem;
+          margin-bottom: 30px;
+          h3 {
+            padding: 0;
+            margin: 0;
+            font-family: utils.$font-header;
+            font-size: 30px;
+            font-weight: 700;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+          }
+        }
+        .message-body {
+          text-align: justify;
+          font-family: utils.$font-body;
+          font-size: 16px;
+          line-height: 2rem;
         }
       }
-      .message-body {
-        text-align: justify;
-        font-family: utils.$font-body;
-        font-size: 16px;
-        line-height: 2rem;
+      .img-msg {
+        background-image: url("../assets/admin.png");
+        // background-position: center;
+        background-size: cover;
+        background-position-x: 35%;
+        background-position-y: 80%;
+        width: 100%;
       }
-    }
-    .img-msg {
-      background-image: url("../assets/admin.jpg");
-      background-position: center;
-      background-size: cover;
-      background-position-x: 25%;
-      width: 30%;
     }
   }
   .phil-component {
@@ -517,7 +523,7 @@ body {
     #to-top {
       z-index: 2;
       position: relative;
-top: 70px;
+      top: 70px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -529,7 +535,7 @@ top: 70px;
       margin-bottom: 40px;
       background-color: utils.$primary-color;
       color: white;
-      &:hover{
+      &:hover {
         border: 2px solid utils.$primary-color;
         background-color: white;
         color: utils.$blue;
@@ -688,22 +694,27 @@ $desktop-xl: 1250px;
       background-size: cover;
       background-position-x: 5%;
       display: flex;
-      flex-direction: column-reverse;
       height: fit-content;
-      padding-left: 0;
+      justify-content: center;
       gap: 20px;
 
-      .message-container {
-        padding-block: 80px;
-        width: 90%;
-      }
-      .img-msg {
-        background-image: url("../assets/admin.jpg");
-        background-position: center;
-        background-size: cover;
-        background-position-y: 15%;
+      .message-box {
         width: 100%;
-        height: 500px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        .message-container {
+          padding-block: 80px;
+          width: 90%;
+        }
+        .img-msg {
+          background-image: url("../assets/admin.png");
+          background-position: center;
+          background-size: cover;
+          background-position-y: 15%;
+          width: 100%;
+          height: 500px;
+        }
       }
     }
     .phil-component {
@@ -1017,22 +1028,27 @@ $desktop-xl: 1250px;
       background-size: cover;
       background-position-x: 5%;
       display: flex;
-      flex-direction: column-reverse;
       height: fit-content;
-      padding-left: 0;
+      justify-content: center;
       gap: 20px;
 
-      .message-container {
-        padding-block: 80px;
-        width: 90%;
-      }
-      .img-msg {
-        background-image: url("../assets/admin.jpg");
-        background-position: center;
-        background-size: cover;
-        background-position-y: 20%;
+      .message-box {
         width: 100%;
-        height: 600px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        .message-container {
+          padding-block: 80px;
+          width: 85%;
+        }
+        .img-msg {
+          background-image: url("../assets/admin.png");
+          background-position: center;
+          background-size: cover;
+          background-position-y: 20%;
+          width: 100%;
+          height: 600px;
+        }
       }
     }
     .phil-component {
