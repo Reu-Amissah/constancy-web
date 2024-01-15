@@ -644,7 +644,6 @@ $desktop-xl: 1250px;
     Mobile Nav Items
 ---------------------------------*/
 
-
 @media (max-width: $tablet) {
   #mobile-menu {
     display: flex;
@@ -711,7 +710,7 @@ $desktop-xl: 1250px;
     Mobile MQ
 ---------------------------*/
 
-@media (max-width: $tablet)  {
+@media (max-width: $tablet) {
   body {
     .info-component {
       padding: 50px 10px;
@@ -788,11 +787,10 @@ $desktop-xl: 1250px;
             font-size: 16px;
             font-family: utils.$font-body;
           }
-         
         }
       }
     }
- 
+
     #scrollContainer {
       padding-top: 80px;
       .scroll-title {
@@ -889,9 +887,7 @@ $desktop-xl: 1250px;
 
 @media (min-width: $tablet) and (max-width: $desktop-xl) {
   body {
-    
     .info-component {
-      
       padding: 60px 20px;
       border-radius: 5px;
       color: black;
@@ -1041,9 +1037,7 @@ $desktop-xl: 1250px;
         }
       }
     }
-   
-  
-    
+
     #scrollContainer {
       padding-top: 80px;
       .scroll-title {
@@ -1061,7 +1055,7 @@ $desktop-xl: 1250px;
 
         #scrollableDiv {
           overflow-x: hidden;
-          white-space: nowrap;
+          white-space: wrap;
           scroll-behavior: smooth;
           display: flex;
           gap: 10px;
@@ -1075,7 +1069,7 @@ $desktop-xl: 1250px;
             font-size: 16px;
             line-height: 1.6rem;
             color: utils.$text-light;
-            white-space: wrap;
+            white-space: normal;
             //   overflow-x: auto;
 
             h3 {
