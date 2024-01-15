@@ -979,11 +979,12 @@ body .final-service .final-component h3 {
     display: flex;
     align-items: center;
     width: 85%;
+    height: auto;
     margin-inline: auto;
   }
   body #scrollContainer .scroll-container #scrollableDiv {
     overflow-x: hidden;
-    white-space: wrap;
+    white-space: normal;
     scroll-behavior: smooth;
     display: flex;
     gap: 10px;
@@ -991,7 +992,7 @@ body .final-service .final-component h3 {
   }
   body #scrollContainer .scroll-container #scrollableDiv .workers {
     text-align: left;
-    min-width: 35%;
+    width: 35%;
     padding: 20px;
     margin-block: 5px;
     font-family: "Supreme", sans-serif;

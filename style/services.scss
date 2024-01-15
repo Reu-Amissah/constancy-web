@@ -1051,18 +1051,19 @@ $desktop-xl: 1250px;
         display: flex;
         align-items: center;
         width: 85%;
+        height: auto;
         margin-inline: auto;
 
         #scrollableDiv {
           overflow-x: hidden;
-          white-space: wrap;
+          white-space: normal;
           scroll-behavior: smooth;
           display: flex;
           gap: 10px;
           width: 100%;
           .workers {
             text-align: left;
-            min-width: 35%;
+            width: 35%;
             padding: 20px;
             margin-block: 5px;
             font-family: utils.$font-body;
