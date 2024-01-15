@@ -814,6 +814,7 @@ $desktop-xl: 1250px;
           gap: 10px;
           width: 100%;
           .workers {
+            
             text-align: left;
             min-width: 85%;
             padding: 20px;
@@ -822,7 +823,7 @@ $desktop-xl: 1250px;
             font-size: 16px;
             line-height: 1.6rem;
             color: utils.$text-light;
-            white-space: wrap;
+            white-space: normal;
             //   overflow-x: auto;
 
             h3 {
