@@ -27,7 +27,10 @@ if(isset($_POST['button']) && isset($_FILES['attachment']))
     //validate form field for attaching the file
     if($error > 0)
     {
-        die('Upload error or No files uploaded');
+        echo '<script type="text/javascript">';
+    echo 'alert("Your message was die!");';
+    echo 'window.location.href = "index.html";';
+    echo '</script>';
     }
  
     //read from the uploaded file & base64_encode content
