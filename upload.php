@@ -38,8 +38,14 @@ $message .= "--".$boundary."--";
 
 // send email
 if (mail($to, $subject, $message, $headers)) {
-    echo "Email with attachment sent successfully.";
+    echo '<script type="text/javascript">';
+    echo 'alert("Your message was sent!");';
+    echo 'window.location.href = "index.html";';
+    echo '</script>';
 } else {
-    echo "Failed to send email with attachment.";
+    echo '<script type="text/javascript">';
+    echo 'alert("Your message was failed!");';
+    echo 'window.location.href = "index.html";';
+    echo '</script>';
 }
 ?>
