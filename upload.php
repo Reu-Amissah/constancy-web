@@ -1,57 +1,50 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if a file was uploaded
+    if (isset($_FILES["file"])) {
+        $file = $_FILES["file"];
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+        // Check for errors during file upload
+        if ($file["error"] === 0) {
+            $to = "reujoyamissah@gmail.com"; // Change this to your email address
+            $subject = "New Job Application";
+            $message = "Specialty and aspirations:\n" . $_POST["specialty"];
 
-if(isset($_POST['submit'])) {
-    $file = $_FILES['file'];
-    
-    $fileName = $_FILES['file']['name'];
-    $fileTmpName = $_FILES['file']['tmp_name'];
-    $fileSize = $_FILES['file']['size'];
-    $fileError = $_FILES['file']['error'];
-    $fileType = $_FILES['file']['type'];
+            // Headers for the email
+            $headers = "From: " . $_POST["email"] . "\r\n";
+            $headers .= "Reply-To: " . $_POST["email"] . "\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
+            // Attach the file to the email
+            $fileContent = file_get_contents($file["tmp_name"]);
+            $fileAttachment = chunk_split(base64_encode($fileContent));
 
-    if($fileError === 0) {
-        $mail = new PHPMailer(true); 
-        try {
-       
-            // THANK YOU CHAT-GPT //
-            $mail->isSMTP(); 
-            $mail->Host = 'mail.thebrainpharmgroup.com'; // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true; // Enable SMTP authentication
-            $mail->Username = '	info@thebrainpharmgroup.com'; // SMTP username
-            $mail->Password = 'j7#L&Nzr2cPE'; // SMTP password
-            $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = 587; // TCP port to connect to
-            
-            //Recipients
-            $mail->setFrom('from@example.com', 'Mailer');
-            $mail->addAddress('reujoyamissah@gmail.com', 'Ekow Amissah'); // Add a recipient
+            $headers .= "Content-Disposition: attachment; filename=\"" . $file["name"] . "\"\r\n";
+            $headers .= "Content-Type: application/octet-stream\r\n";
+            $headers .= "Content-Transfer-Encoding: base64\r\n\r\n";
+            $headers .= $fileAttachment . "\r\n";
 
-            //Attachments
-            $mail->addAttachment($fileTmpName, $fileName); // Add attachments
+            // Send the email
+            mail($to, $subject, $message, $headers);
 
-            //Content
-            $mail->isHTML(true); // Set email format to HTML
-            $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-            
-            $mail->send();
-            echo 'Message has been sent';
+            // Redirect after successful submission
+            header("Location: success.html");
             echo 'window.location.href = "index.html";';
-           
-        } catch (Exception $e) {
-            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+            exit;
+        } else {
+            // Handle file upload error
+            echo "File upload failed. Error code: " . $file["error"];
             echo 'window.location.href = "index.html";';
         }
     } else {
-        echo "There was an error uploading your file!";
+        // Handle if no file was uploaded
+        echo "No file uploaded.";
         echo 'window.location.href = "index.html";';
     }
+} else {
+    // Handle if the form was not submitted
+    echo "Form not submitted.";
+    echo 'window.location.href = "index.html";';
 }
 ?>
