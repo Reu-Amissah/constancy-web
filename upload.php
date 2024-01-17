@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mail($to, $subject, $message, $headers);
 
             // Redirect after successful submission
-            header("Location: success.html");
+            // header("Location: success.html");
             echo 'window.location.href = "index.html";';
             exit;
         } else {
