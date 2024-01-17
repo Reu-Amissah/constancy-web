@@ -30,21 +30,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redirect after successful submission
             // header("Location: success.html");
+            echo '<script type="text/javascript">';
+            echo 'alert("Your message was sent!");';
             echo 'window.location.href = "index.html";';
+            echo '</script>';
             exit;
         } else {
             // Handle file upload error
             echo "File upload failed. Error code: " . $file["error"];
+            echo '<script type="text/javascript">';
+            echo 'alert("Your message was sent!");';
             echo 'window.location.href = "index.html";';
+            echo '</script>';
         }
     } else {
         // Handle if no file was uploaded
-        echo "No file uploaded.";
+        echo '<script type="text/javascript">';
+        echo 'alert("No file uploaded!");';
         echo 'window.location.href = "index.html";';
+        echo '</script>';
     }
 } else {
     // Handle if the form was not submitted
-    echo "Form not submitted.";
+    echo '<script type="text/javascript">';
+    echo 'alert("form not submitted!");';
     echo 'window.location.href = "index.html";';
+    echo '</script>';
 }
 ?>
