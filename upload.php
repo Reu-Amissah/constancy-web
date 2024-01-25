@@ -2,18 +2,12 @@
 
     $filenameee =  $_FILES['file']['name'];
     $fileName = $_FILES['file']['tmp_name']; 
-    $name = "ekow";
-    $email = "example@example.com";
-    $usermessage = "say something";
     
-    $message ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $usermessage; 
-    
-    $subject ="My email subject";
-    $fromname ="My Website Name";
+    $subject ="CV Submission";
+    $fromname ="Job Application";
     $fromemail = 'info@thebrainpharmgroup.com';  //if u dont have an email create one on your cpanel
 
-    $mailto = 'reujoyamissah@gmail.com';  //the email which u want to recv this email
-
+    $mailto = 'careers@thebrainpharmgroup.com';  //the email which u want to recv this email
 
 
 
@@ -49,10 +43,15 @@
 
     //SEND Mail
     if (mail($mailto, $subject, $body, $headers)) {
-        echo "mail send ... OK"; // do what you want after sending the email
+        echo '<script type="text/javascript">';
+        echo 'alert("Your message was sent!");';
+        echo 'window.location.href = "index.html";';
+        echo '</script>';
         
         
     } else {
-        echo "mail send ... ERROR!";
-        print_r( error_get_last() );
+        echo '<script type="text/javascript">';
+        echo 'alert("Your message was NOT sent!");';
+        echo 'window.location.href = "index.html";';
+        echo '</script>';
     }

@@ -5,14 +5,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST["email"];
   $message = $_POST["message"];
 
-  $to = "reujoyamissah@gmail.com";
+  $to = "info@thebrainpharmgroup.com";
   $subject = "Contact Form Submission from $full_name";
   $headers = "From: $email\r\n";
   $headers .= "Reply-To: $email\r\n";
 
   $mail_body = "Name: $full_name\n";
-  $mail_body .= "Email: $email\n";
-  $mail_body .= "Message:\n$message";
+  $mail_body .= "Email: $email\n\n";
+  $mail_body .= "Message\n$message";
 
   //template
 
